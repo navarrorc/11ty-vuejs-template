@@ -1,18 +1,12 @@
-## Quick start
+## Getting Started
 
-Install the static site generator
-
-```
-npm install -g @11ty/eleventy
-```
-
-Install all the dependencies
+Requires version 8 of Node.js or higher.
 
 ```
-npm install
+npm i
 ```
 
-Run the site in development mode, so that you can to quickly implement the website
+Run the project in development mode, it uses live reload when editing the HTML and Hot Module Replacement (HMR) for the JavaScript.
 
 ```
 npm run dev
