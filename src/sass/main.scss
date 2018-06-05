@@ -1,0 +1,18 @@
+// added to _includes/head.html
+// @font-face {
+//   font-family: "warnock-pro-display";
+//   src: url("/fonts/WarnockPro-Disp.woff") format("woff");
+// }
+
+// @font-face {
+//   font-family: "warnock-pro-bold-display";
+//   src: url("/fonts/WarnockPro-BoldDisp.woff") format("woff");
+// }
+
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+
+// div {
+//   border: 2px solid green;
+// }

@@ -1,0 +1,15 @@
+{
+  "workbench.colorTheme": "Visual Studio Dark",
+  "editor.fontSize": 18,
+  "workbench.iconTheme": "vs-seti",
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "eslint.validate": ["javascript", "javascriptreact", "vue"],
+  "css.validate": false, // Disable css built-in lint
+  "scss.validate": false, // Diable scss built-in lint
+  "stylelint.enable": true, // Enable sytlelint
+  "emmet.triggerExpansionOnTab": true
+}

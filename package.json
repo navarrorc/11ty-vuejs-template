@@ -1,0 +1,92 @@
+{
+  "name": "11ty-vuejs-template",
+  "version": "1.0.0",
+  "description": "website project",
+  "main": "index.js",
+  "scripts": {
+    "predev": "rimraf ./11ty/dist && rimraf ./11ty/_site",
+    "dev": "npm run nodemon -- -x npm-run-all --parallel server 11ty:watch",
+    "build": "npm-run-all build:webpack 11ty",
+    "build-sp": "npm-run-all build:webpack 11ty rename",
+    "build:webpack": "cross-env NODE_ENV=production node ./.scripts/prod-build.js",
+    "nodemon": "nodemon -w webpack.config.js",
+    "rename": "node ./.scripts/rename.js",
+    "11ty": "eleventy",
+    "11ty:watch": "npm run 11ty -- --watch",
+    "server": "cross-env NODE_ENV=development node ./.scripts/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/username/username.github.io.git"
+  },
+  "author": "Roberto C. Navarro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/username/username.github.io/issues"
+  },
+  "homepage": "https://github.com/username/username.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "0.3.5",
+    "autoprefixer": "8.5.0",
+    "babel-core": "6.26.3",
+    "babel-eslint": "8.2.3",
+    "babel-loader": "7.1.4",
+    "babel-plugin-syntax-dynamic-import": "6.18.0",
+    "babel-preset-env": "1.7.0",
+    "browser-sync": "2.24.4",
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "5.1.5",
+    "css-hot-loader": "1.3.9",
+    "css-loader": "0.28.11",
+    "eslint": "4.10.0",
+    "eslint-loader": "1.9.0",
+    "eslint-plugin-html": "3.2.2",
+    "eslint-plugin-import": "2.12.0",
+    "extract-text-webpack-plugin": "3.0.2",
+    "file-loader": "1.1.11",
+    "glob": "7.1.2",
+    "json-loader": "0.5.7",
+    "node-sass": "4.9.0",
+    "nodemon": "1.17.5",
+    "npm-run-all": "^4.1.3",
+    "optimize-css-assets-webpack-plugin": "3.2.0",
+    "postcss-loader": "2.1.5",
+    "rimraf": "2.6.2",
+    "sass-loader": "7.0.1",
+    "stylelint": "9.2.1",
+    "stylelint-config-recommended": "2.1.0",
+    "tailwindcss": "0.5.3",
+    "vue-loader": "14.2.2",
+    "vue-template-compiler": "2.5.16",
+    "webpack": "3.8.1",
+    "webpack-bundle-analyzer": "2.13.1",
+    "webpack-dev-middleware": "2.0.6",
+    "webpack-hot-middleware": "2.22.2",
+    "webpack-merge": "4.1.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "vue": "^2.5.16"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "iOS 8"
+  ],
+  "postcss": {},
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "modules": false
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "syntax-dynamic-import"
+      ]
+    ]
+  }
+}
