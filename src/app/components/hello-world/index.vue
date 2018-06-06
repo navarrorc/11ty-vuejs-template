@@ -1,8 +1,16 @@
 // hello-world component
 
 <template>
-  <div>
-    <h1 class="text-green-dark">Hello World from {{name}}</h1>
+  <div class="border">
+    <h1 class="text-red-dark">Counter with Hot Reload.</h1>
+    <br>
+    <p>Current count: {{count}}</p>
+    <br>
+    <ul>
+      <li v-for="item in list" :key="item.name">
+        {{item.name}} {{item.emoji}}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -10,8 +18,22 @@
 export default {
   data() {
     return {
-      name: "Vuejs!!!"
+      count: 0,
+      list: [
+        { name: "apple", emoji: "🍎" },
+        { name: "banana", emoji: "🍌" },
+        { name: "grapes", emoji: "🍇" },
+        { name: "orange", emoji: "🍊" }
+      ]
     };
+  },
+  mounted() {
+    this.handle = setInterval(() => {
+      this.count++;
+    }, 1000);
+  },
+  destroyed() {
+    clearInterval(this.handle);
   }
 };
 </script>
