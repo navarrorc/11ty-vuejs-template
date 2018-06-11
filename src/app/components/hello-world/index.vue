@@ -2,7 +2,7 @@
 
 <template>
   <div class="border">
-    <h1 class="text-red-dark">Counter with Hot Reload.</h1>
+    <h1 class="text-red-dark">Counter with Hot Reload🔥</h1>
     <br>
     <p>Current count: {{count}}</p>
     <br>
