@@ -6,6 +6,7 @@
   "scripts": {
     "predev": "rimraf ./11ty/dist && rimraf ./11ty/_site",
     "dev": "npm run nodemon -- -x npm-run-all --parallel server 11ty:watch",
+    "start": "npm run dev",
     "build": "npm-run-all build:webpack 11ty",
     "build-sp": "npm-run-all build:webpack 11ty rename",
     "build:webpack": "cross-env NODE_ENV=production node ./.scripts/prod-build.js",
@@ -26,7 +27,7 @@
   },
   "homepage": "https://github.com/username/username.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "0.3.5",
+    "@11ty/eleventy": "0.3.6",
     "autoprefixer": "8.5.0",
     "babel-core": "6.26.3",
     "babel-eslint": "8.2.3",

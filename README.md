@@ -9,7 +9,7 @@ npm i
 Run the project in development mode, it uses live reload when editing the HTML and Hot Module Replacement (HMR) for the JavaScript.
 
 ```
-npm run dev
+npm start
 ```
 
 ## Deploying
